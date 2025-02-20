@@ -135,7 +135,7 @@ $(document).ready(function() {
     $("#saveThis3").html('<input type="hidden" name="total" value="'+ total +'" />');
     
     // Replace with your actual Google Apps Script Web App URL:
-    var googleScriptURL = "https://script.google.com/macros/s/AKfycbyFoscyDju_5o4nVx05bTa9PVLg4cXSAEEzbRd9FipZZje1zGKwnVkaAwbK3vuFj4S3Jg/exec";
+    var googleScriptURL = "https://script.google.com/macros/s/AKfycbxxjpjfeFh1J33Nmks1n2AJ3ZTo3kR3l5rKP2czlCcBAOodSRjmji53AVffB7bDB_qPwg/exec";
     
     // Prepare the payload with keys matching what the Apps Script expects:
     var payload = {
