@@ -48,25 +48,26 @@ $(document).ready(function() {
   var number_pumps = [];
   var exploded = [];
 
+  /// -----------------------------------------------------
+  // 2. ENGLISH LABELS & MESSAGES
   // -----------------------------------------------------
-  // 2. INDONESIAN LABELS & MESSAGES
-  // -----------------------------------------------------
-  var label_press    = "Pompa Balon";
-  var label_collect  = "Kumpulkan Poin";
-  var label_gonext1  = "Mulai Ronde Berikutnya";
-  var label_gonext2  = "Selesaikan Permainan";
-  var label_balance  = "Total Poin:";
-  var label_currency = " poin";
-  var label_header   = "Permainan Balon - Ronde ";
-  var err_msg        = "Anda baru dapat mengumpulkan poin setelah memompa balon minimal satu kali.";
-
-  var msg_explosion1 = "<p>Balon meledak setelah pompa ke- ";
-  var msg_explosion2 = ".</p><p>Anda tidak mendapatkan poin pada ronde ini.</p>";
-  var msg_collect1   = "<p>Balon tidak meledak!</p><p>Anda mendapatkan ";
-  var msg_collect2   = " poin pada ronde ini. Poin tersebut telah disimpan dengan aman.</p>";
+  var label_press    = "Pump Balloon";
+  var label_collect  = "Collect Points";
+  var label_gonext1  = "Start Next Round";
+  var label_gonext2  = "Finish Game";
+  var label_balance  = "Total Points:";
+  var label_currency = " points";
+  var label_header   = "Balloon Game - Round ";
+  var err_msg        = "You can only collect points after pumping the balloon at least once.";
+  
+  var msg_explosion1 = "<p>The balloon popped after pump number ";
+  var msg_explosion2 = ".</p><p>You earned no points this round.</p>";
+  var msg_collect1   = "<p>The balloon did not pop!</p><p>You earned ";
+  var msg_collect2   = " points this round. The points have been safely saved.</p>";
   // Updated end message with new instructions.
-  var msg_end1       = "<p>Bagian ini sudah selesai. Anda mendapatkan total ";
-  var msg_end2       = " poin. Data telah tersimpan. Silakan klik panah biru di pojok kanan bawah untuk melanjutkan.</p>";
+  var msg_end1       = "<p>This section is complete. You earned a total of ";
+  var msg_end2       = " points. The data has been saved. Please click the blue arrow in the bottom right corner to continue.</p>";
+
 
   // Set initial labels on buttons and score display.
   $("#press").text(label_press);
@@ -134,7 +135,7 @@ $(document).ready(function() {
     $("#saveThis3").html('<input type="hidden" name="total" value="'+ total +'" />');
     
     // Replace with your actual Google Apps Script Web App URL:
-    var googleScriptURL = "https://script.google.com/macros/s/AKfycbyT6cQnTId0yVDSfjUMysHDXvUjIkYdEhWXEouT3fiLTRAkCTyA8Kj_uos1o1oeZ5_j/exec";
+    var googleScriptURL = "https://script.google.com/macros/s/AKfycbyFoscyDju_5o4nVx05bTa9PVLg4cXSAEEzbRd9FipZZje1zGKwnVkaAwbK3vuFj4S3Jg/exec";
     
     // Prepare the payload with keys matching what the Apps Script expects:
     var payload = {
