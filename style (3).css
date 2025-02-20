@@ -1,0 +1,165 @@
+body {
+  -webkit-user-select: none;
+     -moz-user-select: -moz-none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* General page elements */
+#round {
+  text-align: center;
+  margin: 10px auto;
+  font-size: 135%;
+}
+
+#message {
+  margin-top: 20px;
+  padding: 10px;
+  line-height: 1.3;
+  font-size: 110%;
+}
+
+#round h2 {
+  margin-bottom: 0;
+  padding: 1px;
+}
+
+/* Main container for experiment */
+#bigwrap {
+  text-align: center;
+  width: 90%;
+  max-width: 550px;
+  font-size: 135%;
+  margin: 15px auto;
+}
+
+/* Balloon container */
+#ballonwrap {
+  position: relative;
+  height: 420px;
+  border: solid 1px black;
+  border-radius: 5px;
+  width: 100%;
+  background: #fff;
+}
+
+/* Balloon image */
+#ballon {
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Current round points overlay, positioned at the top right of the balloon container */
+#current_points {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Score display */
+#total, #last_round {
+  display: table;
+  width: 100%;
+  margin: 4px 0;
+  padding: 4px 0;
+  background: #fff;
+  border-radius: 5px;
+}
+
+#total_term, #total_value, #last_term, #last_value {
+  display: table-cell;
+  width: 50%;
+}
+
+#total_term, #last_term {
+  text-align: right;
+}
+
+/* Buttons */
+#press, #goOn, #collect, #gonext {
+  font-size: 110%;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  background: #ddd;
+  border: none;
+}
+
+#press:hover, #collect:hover, #goOn:hover, #gonext:hover {
+  background-color: #c2c2c2;
+}
+
+#gonext {
+  font-size: 110%;
+  border-radius: 10px;
+  width: 300px;
+  margin: 10px auto;
+  padding: 12px;
+}
+
+/* Instruction page styling */
+#instructions {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+#instructions h1 {
+  font-size: 150%;
+}
+
+#instructions p, #instructions ol {
+  font-size: 110%;
+  line-height: 1.4;
+  text-align: left;
+  margin-left: 20px;
+}
+
+#instructions ol {
+  list-style: decimal;
+}
+
+#instructions button {
+  padding: 10px 20px;
+  font-size: 120%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments for mobile devices */
+@media only screen and (max-width: 600px) {
+  #bigwrap {
+    font-size: 120%;
+  }
+  #ballonwrap {
+    height: 300px;
+  }
+  #ballon {
+    height: 100px;
+    width: 100px;
+  }
+  #current_points {
+    font-size: 18px;
+    padding: 3px 8px;
+  }
+}

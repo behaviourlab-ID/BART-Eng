@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Responsive viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BART - Permainan Balon</title>
+  
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- jQuery and jQuery UI -->
+  <script src="jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="jquery-ui.css">
+  <script src="jquery-ui.js"></script>
+  
+  <!-- Link to our custom script -->
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- Instruction Page -->
+  <div id="instructions">
+    <h1>Selamat Datang di Permainan Balon</h1>
+    <p>Cara Bermain:</p>
+    <ol>
+      <li>Tekan tombol <strong>"Pompa Balon"</strong> untuk meniup balon dan menambah poin.</li>
+      <li>Semakin besar balon, semakin banyak poin yang bisa didapat.</li>
+      <li>Tapi hati-hati! Jika balon meledak, poin di ronde itu hilang.</li>
+      <li>Tekan tombol <strong>"Kumpulkan Poin"</strong> sebelum balon meledak untuk menyimpan poin.</li>
+      <li>Permainan terdiri dari <strong>20 ronde</strong>. Ayo kumpulkan poin sebanyak mungkin!</li>
+    </ol>
+    <button id="startButton">Mulai</button>
+  </div>
+
+  <!-- Main Experiment Container (hidden by default) -->
+  <div id="experiment" style="display: none;">
+    <div id="round"></div>
+    
+    <div id="bigwrap">
+      <!-- Balloon Container -->
+      <div id="ballonwrap">
+        <div id="message"></div>
+        <div id="gonext"></div>
+        <img src="Balloon.png" id="ballon" alt="Balon">
+        <!-- Current Round Points (overlayed on the balloon frame) -->
+        <div id="current_points">Poin Ronde Ini: 0</div>
+      </div>
+      
+      <!-- Control Buttons -->
+      <button type="button" id="press"></button>
+      <button type="button" id="collect"></button>
+      
+      <!-- Total Points Display -->
+      <div id="total">
+        <div id="total_term"></div>
+        <div id="total_value"></div>
+      </div>
+      <button type="button" id="goOn">Lanjut</button>
+    </div>
+    
+    <!-- Hidden fields for data storage (if needed for Qualtrics/submit) -->
+    <div id="saveThis1"></div>
+    <div id="saveThis2"></div>
+    <div id="saveThis3"></div>
+  </div>
+</body>
+</html>
